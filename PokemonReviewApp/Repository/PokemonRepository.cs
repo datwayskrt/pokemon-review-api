@@ -1,13 +1,14 @@
 ﻿using PokemonReviewApp.Data;
+using PokemonReviewApp.Interfaces;
 using PokemonReviewApp.Model;
 
-namespace PokemonReviewApp.Interfaces
+namespace PokemonReviewApp.Repository
 {
     public class PokemonRepository : IPokemonRepository
     {
         private readonly DataContext _context;
-        public PokemonRepository(DataContext context) 
-        { 
+        public PokemonRepository(DataContext context)
+        {
             _context = context;
         }
 
@@ -25,14 +26,14 @@ namespace PokemonReviewApp.Interfaces
         {
             var review = _context.Reviews.Where(p => p.Pokemon.Id == pokeId);
 
-            if(review.Count() <= 0)
+            if (review.Count() <= 0)
                 return 0;
 
-            return ((decimal)review.Sum(r => r.Rating) / review.Count());
+            return (decimal)review.Sum(r => r.Rating) / review.Count();
         }
 
-        public ICollection<Pokemon> GetPokemons() 
-        { 
+        public ICollection<Pokemon> GetPokemons()
+        {
             return _context.Pokemon.OrderBy(p => p.Id).ToList();
         }
 

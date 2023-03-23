@@ -6,9 +6,12 @@ namespace PokemonReviewApp.Helper
 {
     public class MappingProfiles : Profile
     {
-     public MappingProfiles()
+            public MappingProfiles()
             {
                 CreateMap<Pokemon, PokemonDto>();
+                CreateMap<Country, CountryDto>();
+                CreateMap<Category, CategoryDto>();
+
             }
     }
        
