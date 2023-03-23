@@ -85,3 +85,5 @@ C:\Users\whoisxnio\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6
 C:\Users\whoisxnio\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.pdb
 C:\Users\whoisxnio\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\PokemonReviewApp.genruntimeconfig.cache
 C:\Users\whoisxnio\source\repos\PokemonReviewApp\PokemonReviewApp\obj\Debug\net6.0\ref\PokemonReviewApp.dll
+C:\Users\whoisxnio\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\whoisxnio\source\repos\PokemonReviewApp\PokemonReviewApp\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
