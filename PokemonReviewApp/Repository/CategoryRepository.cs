@@ -28,5 +28,17 @@ namespace PokemonReviewApp.Repository
         {
             return _context.PokemonCategories.Where(p => p.CategoryId == CategoryId).Select(c => c.Pokemon).ToList();
         }
+
+        public bool Save()
+        {
+            var saved = _context.SaveChanges();
+            return saved > 0 ? true : false;
+        }
+
+        public bool UpdateCategory(Category category)
+        {
+            _context.Update(category);
+            return Save();
+        }
     }
 }
