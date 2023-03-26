@@ -32,7 +32,7 @@ namespace PokemonReviewApp.Repository
 
         public ICollection<Review> GetReviewsOfAPokemon(int pokeId)
         {
-            throw new NotImplementedException();
+            return _context.Reviews.Where(r => r.Pokemon.Id == pokeId).ToList();
         }
 
         public bool ReviewExists(int reviewId)

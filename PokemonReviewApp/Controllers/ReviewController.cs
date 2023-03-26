@@ -31,14 +31,14 @@ namespace PokemonReviewApp.Controllers
             return Ok(reviews);
         }
 
-        [HttpGet("{reviewId}")]
+        [HttpGet("{reviewId}/reviews")]
         [ProducesResponseType(200, Type = typeof(Review))]
         [ProducesResponseType(400)]
         public IActionResult GetReview(int reviewId)
         {
             if (!_reviewRepository.ReviewExists(reviewId))
                 return NotFound();
-            var review = _mapper.Map<PokemonDto>(_reviewRepository.ReviewExists(reviewId));
+            var review = _mapper.Map<PokemonDto>(_reviewRepository.GetReview(reviewId));
 
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
